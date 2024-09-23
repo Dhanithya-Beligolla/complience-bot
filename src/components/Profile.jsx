@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaRobot } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 
 function Profile() {
@@ -64,6 +64,9 @@ function Profile() {
           <div className="p-3 flex items-center justify-end gap-2">
           <button onClick={handleDelete} className="cursor-pointer text-red-700 hover:opacity-75">
             <FaTrashAlt />
+          </button>
+          <button href="https://compiance-bot101.vercel.app/" className="text-xl text-blue-600 hover:opacity-75">
+            <FaRobot />
           </button>
           <button onClick={handleEdit} className="text-xl text-blue-600 hover:opacity-75">
             <MdEdit />

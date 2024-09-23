@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-do
 import LoginPage from './components/LoginPage'
 import RegisterPage from './components/RegisterPage'
 import HomePage from './components/HomePage'
-import ComplianceBot from './components'
+import ComplianceBot from './components/index2'
 import Profile from './components/Profile';
 import './App.css'
 import { auth } from './components/firebase'
