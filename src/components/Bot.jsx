@@ -53,33 +53,24 @@ function Bot() {
 
   return (
     <div>
-      <h1>Welcome to DFCC Compliance Bot</h1>
-      <p>Interact with the bot in the bottom-right corner.</p>
-
-      {userDetails ? (
+        {userDetails ? (
         <div className="profile-card">
-          <div>
-          
-          <br />
-          <br />
-          </div>
-          <h3>Welcome {userDetails.firstName} 🙏🙏</h3>
-          <div>
-            <h6>Email: {userDetails.email}</h6>
-            <h6>First Name: {userDetails.firstName}</h6>
-            <h6>Last Name: {userDetails.lastName}</h6>
-            <h6>Mobile: {userDetails.mobile}</h6>
-          </div>
-          <div className="profile-buttons">
-
-            <button className="button" onClick={handleLogout}>Logout</button>
-          </div>
+          <h3 style={{fontSize:"20px",fontWeight:"bold", paddingTop:"30px", paddingBottom:"20px" }}>Hello {userDetails.firstName} {userDetails.lastName} </h3>
         </div>
       ) : (
         <p>Loading...</p>
       )}
+      
+       <div className='container' style={{textAlign:"left"}}>
+      <h1 style={{fontSize:"40px",fontWeight:"bold", paddingTop:"20px", paddingBottom:"20px" }}>Welcome to DFCC Compliance Bot</h1>
+      <p>Interact with the bot in the bottom-right corner.</p>
 
-      <df-messenger
+
+
+     </div>
+
+
+          <df-messenger
         project-id="tokyo-analyst-431809-n3"
         agent-id="e593549a-ca6e-4b0b-b2b9-b09c0bd7430f"
         language-code="en"
@@ -88,6 +79,10 @@ function Bot() {
       >
         <df-messenger-chat-bubble chat-title="DFCC Compliance Bot101"></df-messenger-chat-bubble>
       </df-messenger>
+          <div className="profile-buttons">
+
+            <button className="button" onClick={handleLogout}>Logout</button>
+          </div>
     </div>
   );
 }
