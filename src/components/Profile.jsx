@@ -65,9 +65,9 @@ function Profile() {
           <button onClick={handleDelete} className="cursor-pointer text-red-700 hover:opacity-75">
             <FaTrashAlt />
           </button>
-          <button href="https://compiance-bot101.vercel.app/" className="text-xl text-blue-600 hover:opacity-75">
+          <a href="https://compliance-bot101.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xl text-blue-600 hover:opacity-75">
             <FaRobot />
-          </button>
+          </a>
           <button onClick={handleEdit} className="text-xl text-blue-600 hover:opacity-75">
             <MdEdit />
           </button>
