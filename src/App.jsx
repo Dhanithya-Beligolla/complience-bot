@@ -11,6 +11,7 @@ import { useState } from 'react'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Bot from './components/Bot'
 
 
 function App ()  {
@@ -19,6 +20,9 @@ function App ()  {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       setUser(user);
+      // if (user) {
+      //   window.location.href = "https://compliance-bot101.vercel.app/";
+      // }
     });
   });
 
@@ -29,8 +33,9 @@ function App ()  {
             <div className="auth-wrapper">
               <div className="auth-inner">
                 <Routes>
-                  <Route path="/" element={user ? <Navigate to="/profile" /> : <LoginPage />}/>
-                  <Route path="/" element={<HomePage />} />
+                  <Route path="/" element={user ? <Navigate to="/bota" /> : <LoginPage />}/>
+                  <Route path="/home" element={<HomePage />} />
+                  <Route path='/bota' element={<Bot/>}/>
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/register" element={<RegisterPage />} />
                   <Route path="/bot" element={<ComplianceBot/>}/>

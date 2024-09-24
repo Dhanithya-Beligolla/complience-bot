@@ -1,0 +1,92 @@
+body {
+    font-family: 'Google Sans', sans-serif;
+    background: linear-gradient(to right, #E5E5E5, #FF0000); /* Red to white gradient background */
+    color: #000; /* Black text for better readability on lighter background */
+    padding: 50px;
+}
+
+
+h1 {
+    font-size: 3em;
+    color: #000000; /* Yellow for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 100px;
+}        
+
+p {
+    font-size: 1.5em;
+    color: #FFFFFF; /* Lighter yellow */
+    text-shadow: 2px 3px black;
+    margin-left: 100px;
+}
+
+.img2 {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.img3 {
+    margin-left: 100px;
+}
+
+df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: 'Google Sans';
+    --df-messenger-chat-background: #FFEBEE;
+    --df-messenger-message-user-background: #F8BBD0; /* Light pink */
+    --df-messenger-message-bot-background: #FFCDD2; /* Slightly darker pink */
+    bottom: 16px;
+    right: 16px;
+}
+
+/* Chat bubble colors */
+df-messenger-chat-bubble {
+    --df-messenger-bubble-color: #FFC107; /* Yellow bubble text */
+    --df-messenger-bubble-background: #B71C1C; /* Dark red background */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #FFEB3B;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    body {
+        padding: 20px;
+        font-size: 0.9em;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.2em;
+    }
+  
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+
+    df-messenger {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+}

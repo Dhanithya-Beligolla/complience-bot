@@ -18,7 +18,7 @@ function LoginPage() {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("Successfully signed in");
-            navigate('/profile');
+            navigate('/bota');
             //window.location.href = "/profile";
             toast.success("Successfully signed in", { position: "top-center", });
         } catch (error) {
