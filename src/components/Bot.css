@@ -7,7 +7,7 @@ body {
 
 
 h1 {
-    font-size: 3em;
+    font-size: 10em;
     color: #000000; /* Yellow for contrast */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-left: 100px;
@@ -17,7 +17,7 @@ p {
     font-size: 1.5em;
     color: #FFFFFF; /* Lighter yellow */
     text-shadow: 2px 3px black;
-    margin-left: 100px;
+    
 }
 
 .img2 {
@@ -57,15 +57,15 @@ button:hover {
 @media (max-width: 1024px) {
     body {
         padding: 20px;
-        font-size: 0.9em;
+        font-size: 10em;
     }
     
     h1 {
-        font-size: 2em;
+        font-size: 1em;
     }
     
     p {
-        font-size: 1.2em;
+        font-size: 10em;
     }
   
 }
@@ -73,11 +73,11 @@ button:hover {
 @media (max-width: 480px) {
     body {
         padding: 10px;
-        font-size: 0.8em;
+        font-size: 10em;
     }
     
     h1 {
-        font-size: 1.5em;
+        font-size: 10em;
     }
     
     p {
