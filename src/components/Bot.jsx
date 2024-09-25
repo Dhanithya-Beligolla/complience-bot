@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './Bot.css';
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
+import Footer from './Footer';
+import logo from '../assets/logo-dfccbank.png';
+import BotImg from '../assets/3156786.png';
+import bgImg from '../assets/background.png';
+
+
+
 
 function Bot() {
   const [scriptLoaded, setScriptLoaded] = useState(false);
@@ -52,38 +59,47 @@ function Bot() {
   }
 
   return (
-    <div>
+    
+   <div >
+
+        <div className="logo-image">
+          <img src={logo} alt="DFCC Bank Logo" />
+        </div>
+
         {userDetails ? (
         <div className="profile-card">
-          <h3 style={{fontSize:"20px",fontWeight:"bold", paddingTop:"30px", paddingBottom:"20px" }}>Hello {userDetails.firstName} {userDetails.lastName} </h3>
+            
+          <u><h1 style={{fontSize:"35px",fontWeight:"bold", paddingTop:"30px", paddingBottom:"20px",textAlign:"center" }}>Hello {userDetails.firstName} {userDetails.lastName} </h1></u>
         </div>
       ) : (
         <p>Loading...</p>
       )}
-      
        <div className='container' style={{textAlign:"left"}}>
       <h1 style={{fontSize:"40px",fontWeight:"bold", paddingTop:"20px", paddingBottom:"20px" }}>Welcome to DFCC Compliance Bot</h1>
       <p>Interact with the bot in the bottom-right corner.</p>
-
-
-
      </div>
 
+        <div className="bot-image">
+          <img src={BotImg} alt="Bot Image" />
+        </div>
+        
 
-          <df-messenger
+        <df-messenger
         project-id="tokyo-analyst-431809-n3"
         agent-id="e593549a-ca6e-4b0b-b2b9-b09c0bd7430f"
         language-code="en"
         max-query-length="-1"
         allow-feedback="all"
-      >
+        >
         <df-messenger-chat-bubble chat-title="DFCC Compliance Bot101"></df-messenger-chat-bubble>
-      </df-messenger>
+        </df-messenger>
           <div className="profile-buttons">
 
             <button className="button" onClick={handleLogout}>Logout</button>
           </div>
+          <Footer />
     </div>
+   
   );
 }
 
