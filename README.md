@@ -1,6 +1,6 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. Which is able to read the pdfs uploaded to the bucket and answer the questions that asked.
 
 Currently, two official plugins are available:
 
