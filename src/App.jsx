@@ -35,10 +35,10 @@ function App ()  {
                 <Routes>
                   <Route path="/" element={user ? <Navigate to="/bota" /> : <LoginPage />}/>
                   <Route path="/home" element={<HomePage />} />
-                  <Route path='/bota' element={<Bot/>}/>
+                  <Route path='/bot' element={<Bot/>}/>
                   <Route path="/login" element={<LoginPage />} />
                   <Route path="/register" element={<RegisterPage />} />
-                  <Route path="/bot" element={<ComplianceBot/>}/>
+                  <Route path="/bota" element={<ComplianceBot/>}/>
                   <Route path="/profile" element={<Profile />} />
                 </Routes>
                 <ToastContainer />
