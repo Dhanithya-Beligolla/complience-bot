@@ -33,7 +33,7 @@ function App ()  {
             <div className="auth-wrapper">
               <div className="auth-inner">
                 <Routes>
-                  <Route path="/" element={user ? <Navigate to="/bota" /> : <LoginPage />}/>
+                  <Route path="/" element={user ? <Navigate to="/bot" /> : <LoginPage />}/>
                   <Route path="/home" element={<HomePage />} />
                   <Route path='/bot' element={<Bot/>}/>
                   <Route path="/login" element={<LoginPage />} />
