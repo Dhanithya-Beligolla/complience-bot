@@ -26,6 +26,12 @@ body {
   min-height: 5%;
 }
 
+.p1 {
+  font-size: 1.5em;
+  color: #FFFFFF; /* Lighter yellow */
+  text-shadow: 2px 3px black;
+  margin-left: 100px;
+}
 /* Dialogflow Messenger styling */
 df-messenger {
   z-index: 999;
