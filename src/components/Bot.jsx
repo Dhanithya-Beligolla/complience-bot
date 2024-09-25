@@ -35,7 +35,7 @@ function Bot() {
   async function handleLogout() {
     try {
       await auth.signOut();
-      window.location.href = "/login";
+      window.location.href = "https://dfcccompliance.vercel.app/";
       console.log("User logged out successfully!");
     } catch (error) {
       console.error("Error logging out:", error.message);
