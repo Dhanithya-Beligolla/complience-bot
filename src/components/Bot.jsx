@@ -6,6 +6,7 @@ import Footer from './Footer';
 import logo from '../assets/logo-dfccbank.png';
 import BotImg from '../assets/3156786.png';
 import bgImg from '../assets/background.png';
+import BgImg1 from '../assets/tp244-bg1-02.jpg'
 
 
 
@@ -61,6 +62,7 @@ function Bot() {
   return (
     
    <div >
+      {/* <img src= {BgImg1} alt='bg'/> */}
 
         <div className="logo-image">
           <img src={logo} alt="DFCC Bank Logo" />
@@ -76,14 +78,14 @@ function Bot() {
       )}
        <div className='container' style={{textAlign:"left"}}>
       <h1 style={{fontSize:"40px",fontWeight:"bold", paddingTop:"20px", paddingBottom:"20px" }}>Welcome to DFCC Compliance Bot</h1>
-      <p>Interact with the bot in the bottom-right corner.</p>
+      <p className='p'>Interact with the bot in the bottom-right corner.</p>
      </div>
 
         <div className="bot-image">
           <img src={BotImg} alt="Bot Image" />
         </div>
         
-
+        <div className='bot-align'>
         <df-messenger
         project-id="tokyo-analyst-431809-n3"
         agent-id="e593549a-ca6e-4b0b-b2b9-b09c0bd7430f"
@@ -93,10 +95,13 @@ function Bot() {
         >
         <df-messenger-chat-bubble chat-title="DFCC Compliance Bot101"></df-messenger-chat-bubble>
         </df-messenger>
+        </div>
           <div className="profile-buttons">
 
             <button className="button" onClick={handleLogout}>Logout</button>
           </div>
+          <br/>
+          
           <Footer />
     </div>
    
