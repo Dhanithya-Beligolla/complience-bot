@@ -1,60 +1,111 @@
 body {
-    font-family: 'Google Sans', sans-serif;
-     /* Red to white gradient background */
-    background-image: url('../assets/tp244-bg1-02.jpg'); /* Set your background image */
-    background-size: cover; /* Ensures the image covers the whole screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    height: 100vh; /* Ensures it takes up full viewport height */
-    color: #000; /* Black text for better readability on lighter background */
-    text-align: center;
-    max-width: max-content;
-    margin: 0 auto;
+  font-family: 'Google Sans', sans-serif;
+  background-image: url('../assets/tp244-bg1-02.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
 }
-/* 
-src/components/Bot.css */
-/* .background-image {
-    background-image: url('../assets/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; 
-    width: 100%;
-    position: relative;
-  } */
-/* src/components/Bot.css */
+
 .logo-image {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .logo-image img {
-    max-width: 300px; /* Adjust the size as needed */
-    height: auto;
-  }
-.bot-image{
-    max-width: 50%;
-    min-height: 5%;
-    
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
+.logo-image img {
+  max-width: 300px;
+  height: auto;
+}
 
+.bot-image {
+  max-width: 50%;
+  min-height: 5%;
+}
+
+/* Dialogflow Messenger styling */
 df-messenger {
-    z-index: 999;
-    position: fixed;
-    --df-messenger-font-color: #000;
-    --df-messenger-font-family: 'Google Sans';
-    --df-messenger-chat-background: #FFEBEE;
-    --df-messenger-message-user-background: #F8BBD0; /* Light pink */
-    --df-messenger-message-bot-background: #FFCDD2; /* Slightly darker pink */
-    bottom: 40px;
-    right: 30px;
+  z-index: 999;
+  position: fixed;
+  --df-messenger-font-color: #000;
+  --df-messenger-font-family: 'Google Sans';
+  --df-messenger-chat-background: #FFEBEE;
+  --df-messenger-message-user-background: #F8BBD0;
+  --df-messenger-message-bot-background: #FFCDD2;
+  bottom: 40px;
+  right: 30px;
+  text-align: left;
 }
 
-/* Chat bubble colors */
 df-messenger-chat-bubble {
-    --df-messenger-bubble-color: #FFC107; /* Yellow bubble text */
-    --df-messenger-bubble-background: #B71C1C; /* Dark red background */
+  --df-messenger-bubble-color: #FFC107;
+  --df-messenger-bubble-background: #B71C1C;
 }
 
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+  body {
+      background-size: contain; /* Adjust background to fit smaller screens */
+      height: auto;
+  }
+
+  .logo-image img {
+      max-width: 150px; /* Reduce logo size for smaller screens */
+  }
+
+  .bot-image {
+      max-width: 80%; /* Allow the bot image to take more space on mobile */
+      margin: 0 auto;
+      display: block;
+  }
+
+  df-messenger {
+      bottom: 20px; /* Move the chatbot bubble up for smaller screens */
+      right: 10px;
+  }
+
+  h1 {
+      font-size: 28px; /* Reduce heading font size for smaller screens */
+  }
+
+  .profile-card h1 {
+      font-size: 24px; /* Reduce font size in the profile card */
+  }
+
+  .container h1 {
+      font-size: 32px;
+      padding: 15px;
+  }
+
+  .container p {
+      font-size: 16px;
+  }
+
+  .profile-buttons .button {
+      font-size: 14px; /* Adjust button font size */
+      padding: 10px 20px; /* Smaller padding for buttons on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image img {
+      max-width: 120px; /* Further reduce logo size for very small screens */
+  }
+
+  .container h1 {
+      font-size: 24px; /* Smaller heading for extra small screens */
+  }
+
+  df-messenger {
+      bottom: 10px; /* Move chatbot bubble further up */
+      right: 5px;
+  }
+
+  .profile-buttons .button {
+      font-size: 12px;
+      padding: 8px 16px;
+  }
+}
