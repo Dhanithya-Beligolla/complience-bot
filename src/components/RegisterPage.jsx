@@ -5,6 +5,9 @@ import { setDoc, doc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from '../assets/logo-dfccbank.png';
+import Footer from './Footer';
+
 
 function RegisterPage() {
 
@@ -87,6 +90,11 @@ function RegisterPage() {
 
   return (
     <div className="background-image">
+        <div className="logo-image">
+          <img src={logo} alt="DFCC Bank Logo" />
+        </div>
+        <br />
+        <br />
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <form style={{ backgroundColor: '#314250' }} onSubmit={handleSubmit} className="border border-gray-400 w-[30rem] p-5 flex flex-col gap-5 rounded-md shadow-md shadow-gray-400 m-5 lg:-0">
 
@@ -147,6 +155,7 @@ function RegisterPage() {
                 </p>
             </form>
         </div>
+        < Footer />
     </div>
   )
 }
