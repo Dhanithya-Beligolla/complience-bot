@@ -29,7 +29,7 @@ body {
 .p1 {
   font-size: 1.5em;
   color: #721414; /* Lighter yellow */
-  text-shadow: 2px 3px black;
+  text-shadow: 2px 1px black;
   margin-left: 100px;
 }
 /* Dialogflow Messenger styling */
