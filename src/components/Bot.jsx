@@ -78,7 +78,7 @@ function Bot() {
       )}
        <div className='container' style={{textAlign:"left"}}>
       <h1 style={{fontSize:"40px",fontWeight:"bold", paddingTop:"20px", paddingBottom:"20px" }}>Welcome to DFCC Compliance Bot</h1>
-      <p className='p'>Interact with the bot in the bottom-right corner.</p>
+      <p className='p1'>Interact with the bot in the bottom-right corner.</p>
      </div>
 
         <div className="bot-image">
