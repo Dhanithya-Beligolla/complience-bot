@@ -1,6 +1,11 @@
 body {
     font-family: 'Google Sans', sans-serif;
      /* Red to white gradient background */
+    background-image: url('../assets/tp244-bg1-02.jpg'); /* Set your background image */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures it takes up full viewport height */
     color: #000; /* Black text for better readability on lighter background */
     text-align: center;
     max-width: max-content;
