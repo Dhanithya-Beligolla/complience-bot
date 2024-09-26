@@ -54,7 +54,8 @@ df-messenger-chat-bubble {
 /* Media Queries for mobile devices */
 @media (max-width: 768px) {
   body {
-      background-size: contain; /* Adjust background to fit smaller screens */
+      background-size: cover; /* Keep cover for smaller devices */
+      background-attachment: fixed; /* Fix the background for a smoother scrolling effect */
       height: auto;
   }
 
@@ -97,6 +98,12 @@ df-messenger-chat-bubble {
 }
 
 @media (max-width: 480px) {
+  body {
+      background-size: contain; /* Use contain for very small screens to prevent cropping */
+      background-position: top center; /* Adjust position to center on mobile */
+      height: auto;
+  }
+
   .logo-image img {
       max-width: 120px; /* Further reduce logo size for very small screens */
   }
